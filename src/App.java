@@ -1,8 +1,9 @@
 import processing.core.*;
 import ScreenClasses.*;
 
-public class App extends PApplet{
+public class App extends PApplet {
     ScreenManager game;
+
     public static void main(String[] args) {
         PApplet.main("App");
     }
