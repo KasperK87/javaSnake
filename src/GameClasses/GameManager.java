@@ -19,7 +19,7 @@ public class GameManager {
                 grid[i][j] = 1;
             }
         }
-        grid[(int)food.x][(int)food.y] = 2;
+        grid[(int)food.getX()][(int)food.getY()] = 2;
         //we render the snake
         snake.update();
     }
