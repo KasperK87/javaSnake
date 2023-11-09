@@ -8,7 +8,7 @@ public class App extends PApplet{
     }
 
     public void settings() {
-        size(190, 190);
+        size(190, 190, P2D);
 
         game = new ScreenManager(this);
     }
