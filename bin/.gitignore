@@ -1,0 +1,10 @@
+.vscode/
+
+# Build artifacts
+*.o
+*.exe
+*.dll
+*.so
+*.dylib
+*.jar
+*.class
