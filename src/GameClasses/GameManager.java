@@ -1,5 +1,7 @@
 package GameClasses;
 
+import processing.core.PVector;
+
 public class GameManager {
     int[][] grid;
 
@@ -22,6 +24,10 @@ public class GameManager {
         grid[(int)food.getX()][(int)food.getY()] = 2;
         //we render the snake
         snake.update();
+        for (int i = 0; i < snake.longSnake.size(); i++) {
+            PVector pos = snake.longSnake.get(i);
+            grid[(int)pos.x][(int)pos.y] = 0;
+        }
     }
 
     public int[][] getGrid() {

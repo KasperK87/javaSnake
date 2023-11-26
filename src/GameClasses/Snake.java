@@ -17,7 +17,7 @@ public class Snake {
         longSnake = new ArrayList<PVector>();
         longSnake.add(new PVector(9, 9));
         snakeSize = 2;
-        dir = new PVector(9, 9);
+        dir = new PVector(0, 0);
     }
 
     public void update() {
@@ -36,7 +36,7 @@ public class Snake {
 
         //sletter det ældste punkt i slangen
         if (longSnake.size() > snakeSize) {
-            //longSnake.remove(0);
+            longSnake.remove(0);
         }
     }
 }
