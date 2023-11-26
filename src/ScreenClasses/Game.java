@@ -19,7 +19,23 @@ public class Game extends Screen{
 
     public void update() {
         System.out.println("Game update");
-        gm.run();
+        //get controller input
+        if (p.keyPressed){
+            if (p.key == PApplet.CODED){
+                if (p.keyCode == PApplet.UP){
+                    gm.setDirection(0);
+                } else if (p.keyCode == PApplet.DOWN){
+                    gm.setDirection(1);
+                } else if (p.keyCode == PApplet.LEFT){
+                    gm.setDirection(2);
+                } else if (p.keyCode == PApplet.RIGHT){
+                    gm.setDirection(3);
+                }
+            }
+        }
+        //update game logic every 10 frames
+        if (p.frameCount % 10 == 0)
+            gm.run();
     }
 
     public void render() {

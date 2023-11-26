@@ -38,5 +38,7 @@ public class GameManager {
         snake.update();
     }
 
-
+    public void setDirection(int dir) {
+        snake.setDirection(dir);
+    }
 }

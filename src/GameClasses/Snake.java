@@ -39,5 +39,22 @@ public class Snake {
             longSnake.remove(0);
         }
     }
+
+    public void setDirection(int dir) {
+        switch (dir) {
+            case 0:
+                this.dir = new PVector(0, -1);
+                break;
+            case 1:
+                this.dir = new PVector(0, 1);
+                break;
+            case 2:
+                this.dir = new PVector(-1, 0);
+                break;
+            case 3:
+                this.dir = new PVector(1, 0);
+                break;
+        }
+    }
 }
 
