@@ -26,7 +26,8 @@ public class GameManager {
         snake.update();
         for (int i = 0; i < snake.longSnake.size(); i++) {
             PVector pos = snake.longSnake.get(i);
-            grid[(int)pos.x][(int)pos.y] = 0;
+            if (pos.x >= 0 && pos.x < 19 && pos.y >= 0 && pos.y < 19)
+                grid[(int)pos.x][(int)pos.y] = 0;
         }
 
         //we check if the snake has eaten the food
@@ -35,7 +36,7 @@ public class GameManager {
                 
             snake.eat();
             food.spawn();
-        }
+        } 
     }
 
     public int[][] getGrid() {
