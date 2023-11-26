@@ -40,6 +40,10 @@ public class Snake {
         }
     }
 
+    public void eat() {
+        snakeSize++;
+    }
+
     public void setDirection(int dir) {
         switch (dir) {
             case 0:

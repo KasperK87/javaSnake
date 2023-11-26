@@ -28,6 +28,14 @@ public class GameManager {
             PVector pos = snake.longSnake.get(i);
             grid[(int)pos.x][(int)pos.y] = 0;
         }
+
+        //we check if the snake has eaten the food
+        if (snake.longSnake.get(snake.longSnake.size() - 1).x == food.getX() && 
+            snake.longSnake.get(snake.longSnake.size() - 1).y == food.getY()) {
+                
+            snake.eat();
+            food.spawn();
+        }
     }
 
     public int[][] getGrid() {
